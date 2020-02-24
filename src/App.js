@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import "./App.css"
-import "./components/card.css"
+import "./App.css";
+import "./components/card.css";
+import Logo from "./images/address-icon-png-256_256.png"
+
+
+
 
 class App extends Component {
 
@@ -38,14 +42,40 @@ class App extends Component {
                                                     <div className="card">
                                                         <div className="card-body text-center">
                                                             <p><img className=" img-fluid"
-                                                                    src="images/address-icon-png-256_256.png"
+                                                                    src={Logo}
                                                                     alt="card image"></img></p>
                                                             <h4 className="card-title">{address.username} Address</h4>
                                                             <p className="card-text">This is basic card with image on
                                                                 top, title, description and button.</p>
 
-                                                            <a href="#" className="btn btn-primary btn-sm"><i
-                                                                className="fa fa-plus"></i></a>
+
+                                                            <table className="table">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <th>username</th>
+                                                                    <td>{address.username}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>street</th>
+                                                                    <td>{address.street}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>city</th>
+                                                                    <td>{address.city}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>state</th>
+                                                                    <td>{address.state}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>zip</th>
+                                                                    <td>{address.zip}</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+
+                                                            {/*<a href="#" className="btn btn-primary btn-sm"><i
+                                                                className="fa fa-plus"></i></a>*/}
                                                         </div>
                                                     </div>
                                                 </div>
