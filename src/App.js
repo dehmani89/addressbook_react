@@ -3,9 +3,6 @@ import "./App.css";
 import "./components/card.css";
 import Logo from "./images/address-icon-png-256_256.png"
 
-
-
-
 class App extends Component {
 
     state = {
@@ -23,14 +20,13 @@ class App extends Component {
     }
 
    render() {
-
         return (
+
             <div className="container">
 
-
-                <section id="team" class="pb-5">
-                        <h5 class="section-title h1">Address List</h5>
-                        <div class="row">
+                <section id="team" className="pb-5">
+                        <h5 className="section-title h1">Address List</h5>
+                        <div className="row">
 
 
                             {this.state.addresses.map((address) => (
@@ -123,8 +119,37 @@ class App extends Component {
                         </div>
                 </section>
 
-
 <br/>
+
+                <table className="table table-hover table-dark">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colSpan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
 {/*
                <div className="card border-dark mb-3">
                     <h1 className="text-center"><i className="fa fa-address-card fa-lg" aria-hidden="true"></i>
